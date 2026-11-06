@@ -1,82 +1,212 @@
-!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>ANSH TECH WORLD</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial;
-            background: #0b1020;
-            color: white;
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        header {
-            background: #111c38;
-            padding: 25px;
-        }
+<title>ANSH TECH WORLD | Technology & Innovation</title>
 
-        h1 {
-            color: #00d9ff;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .hero {
-            padding: 60px 15px;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #080e20;
+    color: white;
+}
 
-        .box {
-            background: #172440;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 15px;
-        }
+header {
+    background: #101b35;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-        button {
-            background: #00d9ff;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 8px;
-            font-weight: bold;
-        }
+.logo {
+    color: #00d9ff;
+    font-size: 23px;
+    font-weight: bold;
+}
 
-        footer {
-            padding: 20px;
-            background: #111c38;
-        }
-    </style>
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+nav a:hover {
+    color: #00d9ff;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #101b35, #102c50);
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #00d9ff;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #d0d8e8;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #00d9ff;
+    color: #081020;
+    padding: 13px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 55px 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: #00d9ff;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: #142342;
+    padding: 30px;
+    border-radius: 15px;
+    width: 280px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    background: #1b3158;
+}
+
+.card h3 {
+    color: #00d9ff;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #d0d8e8;
+    line-height: 1.6;
+}
+
+.about {
+    background: #101b35;
+}
+
+footer {
+    background: #050a16;
+    padding: 25px;
+    text-align: center;
+    color: #aab8cc;
+}
+
+@media(max-width:600px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    header {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 7px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>ANSH TECH WORLD</h1>
-    <p>Explore the World of Technology 🚀</p>
+    <div class="logo">⚡ ANSH TECH WORLD</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#technology">Technology</a>
+        <a href="#about">About</a>
+    </nav>
 </header>
 
-<section class="hero">
-    <h2>Welcome to Ansh Tech World!</h2>
-    <p>Learn about technology, coding and innovation.</p>
+<div class="hero" id="home">
+    <h1>WELCOME TO ANSH TECH WORLD</h1>
+
+    <p>Explore Technology. Discover Innovation. Build Your Future.</p>
+
+    <a href="#technology" class="btn">Explore Now →</a>
+</div>
+
+<section id="technology">
+    <h2>Explore Our World</h2>
+
+    <div class="container">
+
+        <div class="card">
+            <h3>🤖 Artificial Intelligence</h3>
+            <p>Discover AI, smart machines and the future of technology.</p>
+        </div>
+
+        <div class="card">
+            <h3>💻 Web Development</h3>
+            <p>Learn HTML, CSS and JavaScript to build amazing websites.</p>
+        </div>
+
+        <div class="card">
+            <h3>🌐 Digital World</h3>
+            <p>Explore the internet, computers and digital innovations.</p>
+        </div>
+
+        <div class="card">
+            <h3>📚 Coding Academy</h3>
+            <p>Start your coding journey and develop new skills.</p>
+        </div>
+
+    </div>
 </section>
 
-<div class="box">
-    <h2>💻 Technology</h2>
-    <p>Discover the latest technology and innovations.</p>
-</div>
+<section class="about" id="about">
+    <h2>About ANSH TECH WORLD</h2>
 
-<div class="box">
-    <h2>🌐 Web Development</h2>
-    <p>Learn HTML, CSS and JavaScript.</p>
-</div>
+    <p>
+        Welcome to ANSH TECH WORLD!
+        This platform is created to explore technology,
+        learn coding and discover new innovations.
+    </p>
 
-<div class="box">
-    <h2>🤖 Artificial Intelligence</h2>
-    <p>Explore the amazing world of AI.</p>
-</div>
+    <br>
+
+    <p>Created with passion by Ansh.</p>
+</section>
 
 <footer>
     <p>© 2026 ANSH TECH WORLD</p>
-    <p>Created by Ansh</p>
+    <p>Explore • Learn • Innovate 🚀</p>
 </footer>
 
 </body>
