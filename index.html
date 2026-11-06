@@ -3,265 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+!DOCTYPE html>
+<html>
+<head>
+    <title>ANSH TECH WORLD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #0b1020;
+            color: white;
+            text-align: center;
+        }
 
-<title>Quiz Zone | ANSH TECH WORLD</title>
+        header {
+            background: #111c38;
+            padding: 25px;
+        }
 
-<style>
-* {
-    box-sizing: border-box;
-}
+        h1 {
+            color: #00d9ff;
+        }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #080d1b;
-    color: white;
-}
+        .hero {
+            padding: 60px 15px;
+        }
 
-header {
-    text-align: center;
-    padding: 30px 15px;
-    background: linear-gradient(135deg,#111c3c,#123b60);
-}
+        .box {
+            background: #172440;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 15px;
+        }
 
-header h1 {
-    color: #00d5ff;
-}
+        button {
+            background: #00d9ff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
 
-.container {
-    max-width: 750px;
-    margin: auto;
-    padding: 15px;
-}
-
-.quiz-box {
-    background: #14223b;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 14px;
-}
-
-.question {
-    margin: 25px 0;
-}
-
-.question p {
-    font-weight: bold;
-}
-
-.option {
-    display: block;
-    background: #203452;
-    padding: 13px;
-    margin: 10px 0;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.option:has(input:checked) {
-    background: #075b75;
-    border: 1px solid #00d5ff;
-}
-
-.option input {
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-button {
-    background: #00d5ff;
-    color: #07101e;
-    border: none;
-    padding: 13px 22px;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    margin: 8px 5px 8px 0;
-}
-
-#result {
-    background: #203452;
-    padding: 18px;
-    border-radius: 10px;
-    margin-top: 20px;
-    color: #ffd166;
-    font-size: 20px;
-    font-weight: bold;
-    display: none;
-}
-
-.back {
-    color: #00d5ff;
-    display: inline-block;
-    margin: 20px 0;
-    text-decoration: none;
-}
-
-footer {
-    text-align: center;
-    background: #101a2d;
-    padding: 22px;
-    color: #aab8cc;
-}
-</style>
+        footer {
+            padding: 20px;
+            background: #111c38;
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-    <h1>🧠 QUIZ ZONE</h1>
-    <p>Test Your Knowledge</p>
-    <h3>ANSH TECH WORLD</h3>
+    <h1>ANSH TECH WORLD</h1>
+    <p>Explore the World of Technology 🚀</p>
 </header>
 
-<div class="container">
+<section class="hero">
+    <h2>Welcome to Ansh Tech World!</h2>
+    <p>Learn about technology, coding and innovation.</p>
+</section>
 
-<div class="quiz-box">
-
-<h2>🏆 Computer & Technology Quiz</h2>
-<p>Select the correct answer for every question.</p>
-
-<form id="quizForm">
-
-<div class="question">
-<p>1. What does CPU stand for?</p>
-<label class="option"><input type="radio" name="q1" value="a"> Central Processing Unit</label>
-<label class="option"><input type="radio" name="q1" value="b"> Computer Personal Unit</label>
-<label class="option"><input type="radio" name="q1" value="c"> Central Program Utility</label>
+<div class="box">
+    <h2>💻 Technology</h2>
+    <p>Discover the latest technology and innovations.</p>
 </div>
 
-<div class="question">
-<p>2. Which language creates webpage structure?</p>
-<label class="option"><input type="radio" name="q2" value="a"> Python</label>
-<label class="option"><input type="radio" name="q2" value="b"> HTML</label>
-<label class="option"><input type="radio" name="q2" value="c"> Java</label>
+<div class="box">
+    <h2>🌐 Web Development</h2>
+    <p>Learn HTML, CSS and JavaScript.</p>
 </div>
 
-<div class="question">
-<p>3. What does AI stand for?</p>
-<label class="option"><input type="radio" name="q3" value="a"> Automatic Internet</label>
-<label class="option"><input type="radio" name="q3" value="b"> Artificial Intelligence</label>
-<label class="option"><input type="radio" name="q3" value="c"> Advanced Information</label>
-</div>
-
-<div class="question">
-<p>4. Who developed Windows?</p>
-<label class="option"><input type="radio" name="q4" value="a"> Google</label>
-<label class="option"><input type="radio" name="q4" value="b"> Apple</label>
-<label class="option"><input type="radio" name="q4" value="c"> Microsoft</label>
-</div>
-
-<div class="question">
-<p>5. Which is a programming language?</p>
-<label class="option"><input type="radio" name="q5" value="a"> Python</label>
-<label class="option"><input type="radio" name="q5" value="b"> Chrome</label>
-<label class="option"><input type="radio" name="q5" value="c"> Google</label>
-</div>
-
-<div class="question">
-<p>6. What does WWW stand for?</p>
-<label class="option"><input type="radio" name="q6" value="a"> World Wide Web</label>
-<label class="option"><input type="radio" name="q6" value="b"> World Web Window</label>
-<label class="option"><input type="radio" name="q6" value="c"> Wide World Website</label>
-</div>
-
-<div class="question">
-<p>7. Which is a web browser?</p>
-<label class="option"><input type="radio" name="q7" value="a"> Excel</label>
-<label class="option"><input type="radio" name="q7" value="b"> Google Chrome</label>
-<label class="option"><input type="radio" name="q7" value="c"> Photoshop</label>
-</div>
-
-<div class="question">
-<p>8. Which part is called the brain of a computer?</p>
-<label class="option"><input type="radio" name="q8" value="a"> Monitor</label>
-<label class="option"><input type="radio" name="q8" value="b"> Keyboard</label>
-<label class="option"><input type="radio" name="q8" value="c"> CPU</label>
-</div>
-
-<div class="question">
-<p>9. Which language styles websites?</p>
-<label class="option"><input type="radio" name="q9" value="a"> CSS</label>
-<label class="option"><input type="radio" name="q9" value="b"> SQL</label>
-<label class="option"><input type="radio" name="q9" value="c"> Python</label>
-</div>
-
-<div class="question">
-<p>10. What is the full form of USB?</p>
-<label class="option"><input type="radio" name="q10" value="a"> Universal Serial Bus</label>
-<label class="option"><input type="radio" name="q10" value="b"> United System Board</label>
-<label class="option"><input type="radio" name="q10" value="c"> Universal Software Box</label>
-</div>
-
-<button type="button" onclick="checkQuiz()">Submit Quiz</button>
-
-<button type="reset" onclick="resetQuiz()">Reset Quiz</button>
-
-</form>
-
-<div id="result"></div>
-
-</div>
-
-<a href="index.html" class="back">← Back to Home</a>
-
+<div class="box">
+    <h2>🤖 Artificial Intelligence</h2>
+    <p>Explore the amazing world of AI.</p>
 </div>
 
 <footer>
-    <h3>ANSH TECH WORLD</h3>
-    <p>Learn • Explore • Grow</p>
     <p>© 2026 ANSH TECH WORLD</p>
+    <p>Created by Ansh</p>
 </footer>
-
-<script>
-function checkQuiz() {
-
-    const answers = {
-        q1: "a",
-        q2: "b",
-        q3: "b",
-        q4: "c",
-        q5: "a",
-        q6: "a",
-        q7: "b",
-        q8: "c",
-        q9: "a",
-        q10: "a"
-    };
-
-    let score = 0;
-
-    for (let q in answers) {
-        let selected = document.querySelector(
-            'input[name="' + q + '"]:checked'
-        );
-
-        if (selected && selected.value === answers[q]) {
-            score++;
-        }
-    }
-
-    let result = document.getElementById("result");
-
-    result.style.display = "block";
-
-    result.innerHTML =
-        "🎉 Your Score: " + score + " / 10" +
-        "<br><br>" +
-        (score === 10 ? "🏆 Perfect Score!" :
-        score >= 7 ? "Excellent Work!" :
-        score >= 5 ? "Good Try! Keep Learning!" :
-        "Keep Practising! You Can Improve!");
-    
-    result.scrollIntoView({behavior: "smooth"});
-}
-
-function resetQuiz() {
-    let result = document.getElementById("result");
-    result.style.display = "none";
-    result.innerHTML = "";
-}
-</script>
 
 </body>
 </html>
+
+    
