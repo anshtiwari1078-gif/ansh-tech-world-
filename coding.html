@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Coding Zone | ANSH TECH WORLD</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #080d1b;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 40px 15px;
+    background: linear-gradient(135deg,#111c3c,#123b60);
+}
+
+header h1 {
+    color: #00d5ff;
+    font-size: 34px;
+}
+
+nav {
+    background: #101a2d;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #00d5ff;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.container {
+    max-width: 950px;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    background: #14223b;
+    padding: 22px;
+    margin: 20px 0;
+    border-radius: 12px;
+    border-left: 4px solid #00d5ff;
+}
+
+h2 {
+    color: #00d5ff;
+}
+
+.card {
+    background: #203452;
+    padding: 16px;
+    margin: 12px 0;
+    border-radius: 10px;
+}
+
+pre {
+    background: #050a14;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    color: #8cffb5;
+    white-space: pre-wrap;
+}
+
+button {
+    background: #00d5ff;
+    color: #06111d;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.back {
+    color: #00d5ff;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    background: #101a2d;
+    padding: 25px;
+    color: #aab8cc;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>💻 CODING ZONE</h1>
+    <p>Learn Coding From Zero to Advanced</p>
+    <h3>ANSH TECH WORLD</h3>
+</header>
+
+<nav>
+    <a href="#intro">Introduction</a>
+    <a href="#html">HTML</a>
+    <a href="#css">CSS</a>
+    <a href="#js">JavaScript</a>
+    <a href="#languages">Languages</a>
+    <a href="#quiz">Quiz</a>
+</nav>
+
+<div class="container">
+
+<section id="intro">
+    <h2>1. What is Coding?</h2>
+    <p>
+        Coding is the process of writing instructions
+        that tell a computer what to do.
+    </p>
+    <p>
+        We use coding to create websites, applications,
+        games and software.
+    </p>
+</section>
+
+<section id="html">
+    <h2>2. Learn HTML</h2>
+    <p>
+        HTML stands for HyperText Markup Language.
+        It is used to create the structure of web pages.
+    </p>
+
+    <div class="card">
+        <h3>Example: My First Heading</h3>
+        <pre>
+&lt;h1&gt;Hello World!&lt;/h1&gt;
+&lt;p&gt;Welcome to Coding Zone.&lt;/p&gt;
+        </pre>
+    </div>
+</section>
+
+<section id="css">
+    <h2>3. Learn CSS</h2>
+    <p>
+        CSS stands for Cascading Style Sheets.
+        It makes websites beautiful with colours,
+        fonts, spacing and layouts.
+    </p>
+
+    <div class="card">
+        <h3>Example: Change Text Colour</h3>
+        <pre>
+h1 {
+    color: blue;
+    font-size: 30px;
+}
+        </pre>
+    </div>
+</section>
+
+<section id="js">
+    <h2>4. Learn JavaScript</h2>
+    <p>
+        JavaScript makes websites interactive.
+        It can respond to clicks and user actions.
+    </p>
+
+    <div class="card">
+        <h3>Example: JavaScript</h3>
+        <pre>
+alert("Welcome to ANSH TECH WORLD!");
+        </pre>
+        <button onclick="alert('Welcome to ANSH TECH WORLD!')">
+            Try JavaScript
+        </button>
+    </div>
+</section>
+
+<section id="languages">
+    <h2>5. Popular Programming Languages</h2>
+
+    <div class="card">
+        <h3>🐍 Python</h3>
+        <p>Used in AI, automation and data science.</p>
+    </div>
+
+    <div class="card">
+        <h3>☕ Java</h3>
+        <p>Used in applications and software development.</p>
+    </div>
+
+    <div class="card">
+        <h3>⚡ JavaScript</h3>
+        <p>Used to make websites interactive.</p>
+    </div>
+
+    <div class="card">
+        <h3>💻 C++</h3>
+        <p>Used in software, games and competitive programming.</p>
+    </div>
+</section>
+
+<section id="quiz">
+    <h2>6. Coding Quiz</h2>
+    <p><b>Question:</b> Which language is used to structure a webpage?</p>
+
+    <label>
+        <input type="radio" name="answer" value="a"> Python
+    </label><br>
+
+    <label>
+        <input type="radio" name="answer" value="b"> HTML
+    </label><br>
+
+    <label>
+        <input type="radio" name="answer" value="c"> Java
+    </label><br>
+
+    <button onclick="checkAnswer()">Submit Answer</button>
+
+    <p id="result"></p>
+</section>
+
+<a href="index.html" class="back">← Back to Home</a>
+
+</div>
+
+<footer>
+    <h3>ANSH TECH WORLD</h3>
+    <p>Learn • Code • Create</p>
+    <p>© 2026 ANSH TECH WORLD</p>
+</footer>
+
+<script>
+function checkAnswer() {
+    let answer = document.querySelector(
+        'input[name="answer"]:checked'
+    );
+
+    let result = document.getElementById("result");
+
+    if (!answer) {
+        result.innerHTML = "Please select an answer!";
+    }
+    else if (answer.value === "b") {
+        result.innerHTML = "🎉 Correct Answer!";
+    }
+    else {
+        result.innerHTML = "❌ Try Again!";
+    }
+}
+</script>
+
+</body>
+</html>
