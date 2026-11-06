@@ -185,4 +185,40 @@ footer {
 <button type="reset" onclick="resetQuiz()">Reset Quiz</button>
 
 <div id="result"></div>
+    <script>
+function checkQuiz() {
+    const answers = {
+        q1: "a",
+        q2: "b",
+        q3: "b",
+        q4: "c",
+        q5: "a",
+        q6: "a",
+        q7: "b",
+        q8: "c",
+        q9: "a",
+        q10: "a"
+    };
+
+    let score = 0;
+
+    for (let q in answers) {
+        let selected = document.querySelector(
+            'input[name="' + q + '"]:checked'
+        );
+
+        if (selected && selected.value === answers[q]) {
+            score++;
+        }
+    }
+
+    let result = document.getElementById("result");
+    result.style.display = "block";
+    result.innerHTML = "🏆 Your Score: " + score + " / 10";
+}
+
+function resetQuiz() {
+    document.getElementById("result").style.display = "none";
+}
+    </script>
 </form>
